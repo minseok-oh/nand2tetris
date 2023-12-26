@@ -1,0 +1,15 @@
+// Multiplies R0 and R1
+// Store the result in R2
+
+    i = 1
+    result = 0
+    left_value = R0
+    right_value = R1
+
+LOOP:
+    if (i > right_value) goto END
+    result = result + left_value
+    i = i + 1
+    goto LOOP
+END:
+    R2 = result
